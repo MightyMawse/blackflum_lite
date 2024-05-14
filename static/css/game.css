@@ -1,0 +1,27 @@
+.game-p-container{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+.game-p-half{
+    border: solid rgb(133, 122, 122) 1px;
+    box-shadow: 0 0 10px rgb(133, 122, 122);
+    border-radius: 4px;
+    height: 45%;
+    width: 90%;
+    color: white;
+    padding: 1%;
+    margin-top: 2%;
+}
+
+.player-obj{
+    border: solid rgb(133, 122, 122) 1px;
+    box-shadow: 0 0 5px rgb(133, 122, 122);
+    border-radius: 10px;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}

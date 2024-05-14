@@ -1,0 +1,69 @@
+body{
+  background-color: black;
+}
+
+.page-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 500px;
+}
+
+.logo-container{
+  display: flex;
+  justify-content: center;
+  height: 30%;
+}
+
+.login-container{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.input{
+  background-color: black;
+  color: white;
+  outline: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 1%;
+  margin: 1%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.login{
+  border: white solid 1px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px white;
+  width: 20%;
+  height: 100%;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.role-btn-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.btn{
+  border: solid white 1px;
+  border-radius: 2px;
+  transition-duration: 500ms;
+  cursor: pointer;
+  font-size: 20px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.btn:hover{
+  color: red;
+}
