@@ -53,6 +53,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  transition-duration: 2000ms;
 }
 
 .role-btn-container{

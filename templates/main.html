@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/default_scheme.css')}}">
     <script src="{{ url_for('static', filename='js/main.js')}}"></script>
 </head>
-<body>
+<body onload="BorderPulse()">
     <div class="page-container">
         <div class="logo-container">
             <img src="{{ url_for('static', filename='imgs/blackflum.PNG')}}">
         </div>
         <div class="login-container">
-            <div class="login">
+            <div class="login" id="login">
                 <input id="username" class="input" placeholder="Username...">
                 <input id="session_name" class="input" placeholder="Session Name...">
                 <div class="role-btn-container">

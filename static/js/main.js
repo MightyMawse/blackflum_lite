@@ -1,4 +1,6 @@
-﻿// Press player./dealer btn
+﻿const timer = ms => new Promise(res => setTimeout(res, ms));
+
+// Press player./dealer btn
 function Submit(role){
     var usrField = document.getElementById("username");
     var sesField = document.getElementById("session_name");
@@ -7,6 +9,16 @@ function Submit(role){
     }
     else
         alert("Please enter all required information.");
+}
+
+// Luh cool border pulse
+async function BorderPulse(){
+    while(true){
+        await timer(2000);
+        document.getElementById("login").style.boxShadow = "0 0 15px white";
+        await timer(2000);
+        document.getElementById("login").style.boxShadow = "0 0 10px white";
+    }
 }
 
 // Send login post request
