@@ -1,5 +1,6 @@
 body{
   background-color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .page-container{
@@ -7,6 +8,14 @@ body{
   flex-direction: column;
   justify-content: space-around;
   height: 500px;
+}
+
+.separator{
+  border: solid rgb(133, 122, 122) 1px;
+  box-shadow: 0 0 10px rgb(133, 122, 122);
+  border-radius: 100px;
+  width: 100%;
+  position: absolute;
 }
 
 .logo-container{

@@ -3,7 +3,7 @@ function Submit(role){
     var usrField = document.getElementById("username");
     var sesField = document.getElementById("session_name");
     if(usrField.value != '' && sesField.value != ''){
-        Login(role, usrField.value, sesField.value);
+        Login(usrField.value, sesField.value);
     }
     else
         alert("Please enter all required information.");
@@ -11,35 +11,17 @@ function Submit(role){
 
 // Send login post request
 async function Login(user, sesName){
-    try{
-        body = user + '_' + sesName; // Make body
+    body = user + '_' + sesName; // Make body
+    var loginResponse = await SendRequest("POST", "/login", JSON.stringify(body)); // Send login
+    if(loginResponse == "SESSION_JOINED"){
+        document.location.href = "/game"
     }
-    catch(error){ console.error("Login()" + error); }
-
-    var loginResponse = SendRequest("POST", "/login", body); // Send login
-    var redirectRoute = loginResponse == "SESSION_JOINED" ? "/game_p" : "/game_d";
-
-    if (loginResponse == "SESSION_DUPLICATE") {
-        alert("Session with name {0} already exists", sesName);
-    }
-    else {
-        sessionStorage.setItem("user_role", role);
-        sessionStorage.setItem("user", user);
-
-        var sessionID = null; // Wait for other threads to catch up
-        while (sessionID == null) {
-            var req = await SendRequest("POST", "/get_session_id", sesName);
-            if (req != "NO_SESSIONS_AVAILABLE") {
-                sessionID = req;
-            }
-        }
-
-        sessionStorage.setItem("session_id", sessionID);
-
-        window.location.href = redirectRoute;
+    else{
+        alert(loginResponse)
     }
 }
 
+// Send Json request
 async function SendRequest(mtd, route, bdy){
     const request = await fetch(route, {
         method: mtd,

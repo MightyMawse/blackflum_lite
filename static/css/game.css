@@ -10,11 +10,79 @@
     border: solid rgb(133, 122, 122) 1px;
     box-shadow: 0 0 10px rgb(133, 122, 122);
     border-radius: 4px;
-    height: 45%;
-    width: 90%;
+    height: 30%;
+    width: 50%;
     color: white;
     padding: 1%;
     margin-top: 2%;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.deck{
+    position: absolute;
+    left: 85%; 
+    bottom: 70%;
+    border: solid rgb(133, 122, 122) 1px;
+    box-shadow: 0 0 10px rgb(133, 122, 122);
+    border-radius: 4px;
+    width: 100px;
+    height: 130px;
+}
+
+.balance{
+    position: absolute;
+    left: 80%; 
+    bottom: 10%;
+    border: solid rgb(133, 122, 122) 1px;
+    box-shadow: 0 0 10px rgb(133, 122, 122);
+    border-radius: 4px;
+    width: 15%;
+    height: 20%;
+    color: white;
+    text-align: center;
+}
+
+.player-controls{
+    position: absolute;
+    left: 5%; 
+    bottom: 10%;
+    border: solid rgb(133, 122, 122) 1px;
+    box-shadow: 0 0 10px rgb(133, 122, 122);
+    border-radius: 4px;
+    width: 15%;
+    height: 20%;
+    color: white;
+    text-align: center;
+}
+
+.player-control-button{
+    border: solid rgb(133, 122, 122) 1px;
+    box-shadow: 0 0 10px rgb(133, 122, 122);
+    border-radius: 4px;
+    width: 50%;
+    height: 40%;
+    text-align: center;
+    color: black;
+    margin-top: 3%;
+    margin-left: 25%;
+    transition-duration: 100ms;
+}
+
+.card{
+    border: solid rgb(133, 122, 122) 1px;
+    box-shadow: 0 0 10px rgb(133, 122, 122);
+    border-radius: 4px;
+    width: 100px;
+    height: 130px;
+}
+
+.card-img{
+    width: 100px;
+    height: 130px;
 }
 
 .player-obj{
@@ -24,4 +92,10 @@
     height: 200px;
     width: 200px;
     text-align: center;
+}
+
+.player-control-button:hover{
+    color: white;
+    font-size: 20;
+    box-shadow: 0 0 20px white;
 }
