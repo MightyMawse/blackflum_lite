@@ -3,18 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <title>BlackFlum</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/default_scheme.css')}}">
-    <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+    <link rel="stylesheet" href="../static/css/default_scheme.css">
+    <script src="../static/js/main.js"></script>
 </head>
-<body onload="BorderPulse()">
+<body onload="BorderPulse(), GetServerList()">
     <div class="page-container">
         <div class="logo-container">
-            <img src="{{ url_for('static', filename='imgs/blackflum.PNG')}}">
+            <img src="../static/imgs/blackflum.PNG" style="width: 20%;">
         </div>
         <div class="login-container">
             <div class="login" id="login">
                 <input id="username" class="input" placeholder="Username...">
-                <input id="session_name" class="input" placeholder="Session Name...">
+                <div>Server Browser</div>
+                <select id="server-browser" size="10" class="server-browser">
+                </select>
                 <div class="role-btn-container">
                     <div class="btn" onclick="Submit()">Join</div>
                 </div>

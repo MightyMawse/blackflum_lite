@@ -1,6 +1,8 @@
 body{
   background-color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url("../imgs/background.jpg");
+  background-size: cover;
 }
 
 .page-container{
@@ -24,6 +26,12 @@ body{
   height: 30%;
 }
 
+.server-browser{
+  border: solid 1px white;
+  background-color: rgba(151, 151, 151, 0.253);
+  color: white;
+}
+
 .login-container{
   display: flex;
   justify-content: center;
@@ -31,20 +39,21 @@ body{
 }
 
 .input{
-  background-color: black;
-  color: white;
+  background-color: rgba(151, 151, 151, 0.253);
+  color: rgb(0, 0, 0);
   outline: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 1%;
   margin: 1%;
   margin-top: 5%;
   margin-bottom: 5%;
+  border: solid 1px white;
 }
 
 .login{
   border: white solid 1px;
   border-radius: 3px;
-  box-shadow: 0 0 10px white;
+  box-shadow: 0 0 15px white;
   width: 20%;
   height: 100%;
   color: white;
@@ -54,6 +63,7 @@ body{
   flex-direction: column;
   justify-content: space-around;
   transition-duration: 2000ms;
+  backdrop-filter: blur(0.2rem);
 }
 
 .role-btn-container{
@@ -75,5 +85,7 @@ body{
 }
 
 .btn:hover{
-  color: red;
+  color: black;
+  background-color: white;
+  box-shadow: 0 0 15px white;
 }
